@@ -10,10 +10,10 @@ import numpy as np
 from skimage.draw import rectangle_perimeter
 from skimage.transform import resize
 
-from models.HigherHRCenterNet import HigherHRCenterNet
+from models.HRRegionNet import HRRegionNet
 from utils.utility import csv_preprocess, calc_iou, soft_nms_pytorch
 
-input_size = 1024
+input_size = 512
 output_size = input_size // 2
 
 test_tx = torchvision.transforms.Compose([

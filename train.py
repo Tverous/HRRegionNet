@@ -8,7 +8,7 @@ import os
 from datasets.HanDataset import dataset_generator
 from utils.utility import csv_preprocess, _nms_eval_iou
 from utils.losses import calc_loss_all, calc_loss_heatmap_only
-from models.HigherHRCenterNet import HigherHRCenterNet
+from models.HRRegionNet import HRRegionNet
 
 crop_size = 512
 output_size = 128
@@ -49,7 +49,7 @@ def train(args, dataloader, checkpoint=None):
     metrics = dict()
     metrics2 = dict()
     
-    model = HigherHRCenterNet()
+    model = HRRegionNet()
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
 
 #     if torch.cuda.device_count() > 1 :

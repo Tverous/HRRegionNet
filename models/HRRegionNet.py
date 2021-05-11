@@ -71,7 +71,7 @@ class StageModule(nn.Module):
         return x_fused
 
 
-class _HigherHRCenterNet(nn.Module):
+class _HRRegionNet(nn.Module):
     def __init__(self, c=48, nof_joints=17, bn_momentum=0.1):
         super(_HigherHRCenterNet, self).__init__()
 
@@ -262,8 +262,8 @@ class _HigherHRCenterNet(nn.Module):
         return final_outputs
 
 
-def HigherHRCenterNet():
+def HRRegionNet():
     
-    model = _HigherHRCenterNet(32, 5, 0.1)
+    model = _HRRegionNet(32, 5, 0.1)
     
     return model

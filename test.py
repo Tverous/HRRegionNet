@@ -8,7 +8,7 @@ from PIL import Image
 import numpy as np
 from skimage.draw import rectangle_perimeter
 
-from models.HRCenterNet import HRCenterNet
+from models.HRRegionNet import HRRegionNet
 
 input_size = 512
 output_size = 128
